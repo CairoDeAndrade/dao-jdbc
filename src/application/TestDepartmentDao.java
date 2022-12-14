@@ -13,10 +13,10 @@ public class TestDepartmentDao {
 		
 		DepartmentDao depDao = DaoFactory.createDepartmentDao();
 		
-		System.out.println("=== TEST 1: insert department ===");
+//		System.out.println("=== TEST 1: insert department ===");
 		Department dep = new Department(null, "Food");
-		depDao.insert(dep);
-		System.out.println("Inserted! New id = " + dep.getId());
+//		depDao.insert(dep);
+//		System.out.println("Inserted! New id = " + dep.getId());
 		
 		System.out.println("\n\n=== TEST 2: update department ===");
 		dep.setId(7);
@@ -29,6 +29,10 @@ public class TestDepartmentDao {
 		int id = sc.nextInt();
 		depDao.deleteById(id);
 		System.out.println("Delete completed!");
+		
+		System.out.println("\n\n=== TEST 4: findById department ===");
+		dep = depDao.findById(1);
+		System.out.println(dep);
 		
 		sc.close();
 
