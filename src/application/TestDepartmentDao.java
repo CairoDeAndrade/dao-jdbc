@@ -18,6 +18,12 @@ public class TestDepartmentDao {
 		depDao.insert(dep);
 		System.out.println("Inserted! New id = " + dep.getId());
 		
+		System.out.println("\n\n=== TEST 2: update department ===");
+		dep.setId(7);
+		dep.setName("Web");
+		depDao.update(dep);
+		System.out.println("Update completed!");
+		
 		sc.close();
 
 	}
