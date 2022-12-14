@@ -24,6 +24,12 @@ public class TestDepartmentDao {
 		depDao.update(dep);
 		System.out.println("Update completed!");
 		
+		System.out.println("\n\n=== TEST 3: deleteById department ===");
+		System.out.print("enter an id to delete a department: ");
+		int id = sc.nextInt();
+		depDao.deleteById(id);
+		System.out.println("Delete completed!");
+		
 		sc.close();
 
 	}
